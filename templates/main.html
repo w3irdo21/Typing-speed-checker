@@ -1,9 +1,10 @@
 <html lang="en">
 <head>
-    <title>Simple Speed Typer</title>
+    <title>Typing Speed Typer</title>
  
-    <!-- link the CSS file here -->
-    <link rel="stylesheet" href="style.css">
+    <!--  CSS file Linked here -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
 </head>
 <body>
   <div class="container">
@@ -39,16 +40,15 @@
     <textarea class="input_area"
       placeholder="start typing here..."
       oninput="processCurrentText()"
-      onfocus="startGame()">
-      Click to Start :>
-    </textarea>
+      onfocus="startGame()">        Click to Start :></textarea>
     <button class="restart_btn"
       onclick="resetValues()">
       Restart
     </button>
   </div>
 </body>
-  <!-- link the JavaScript file here -->
-  <script src="logic.js">
-</script>
+  <!-- JavaScript file linked  here -->
+  <script src="{{ url_for('static', filename='js/script.js') }}">
+  </script>
+
 </html>
